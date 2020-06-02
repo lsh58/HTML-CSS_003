@@ -55,8 +55,9 @@ header .box01 > a span{
     position: absolute;
     border-radius: 40px;
 }
-header .box01 > a span:nth-child()(1){
+header .box01 > a span:nth-child(1){
     top: 0;
+    transition: .5s;
 }
 header .box01 >  a span:nth-of-type(2){
     top:50%;
@@ -67,11 +68,11 @@ header .box01 >  a span:nth-of-type(2){
 header .box01 > a span:nth-of-type(3){
     bottom: 0;
     max-width: 86%;
+    transition: .5s;
 }
 header .box01 > a:hover span:nth-of-type(1){
     top:35%;
     transform: translateY(-50%) rotate(45deg);
-    transition: .5s;
 }
 header .box01 > a:hover span:nth-of-type(2){
     opacity:0;
@@ -80,7 +81,6 @@ header .box01 >  a:hover span:nth-of-type(3){
     bottom:50%;
     transform: translateY(-50%) rotate(-45deg);
     max-width: 100%;
-    transition: .5s;
 }
 
 section{
@@ -94,6 +94,7 @@ section article{
     height: 643px;
     background: #fff;
     box-shadow: 5px 5px 50px rgba(0,0,0,0.3);
+    transition: .5s;
     margin: 0 auto;
 }
 section article h2{

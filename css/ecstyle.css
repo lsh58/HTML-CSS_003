@@ -1,0 +1,234 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url('https://fonts.googleapis.com/css?family=Baskervville:400i|Bentham|PT+Serif:400,400i&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+   display: block;
+}
+body {
+   line-height: 1;
+}
+ol, ul {
+   list-style: none;
+}
+blockquote, q {
+   quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+   content: '';
+   content: none;
+}
+table {
+   border-collapse: collapse;
+   border-spacing: 0;
+}
+
+.clearfix:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+img{
+    vertical-align: top;
+}
+
+/* Typography */
+/*
+ font-family: 'Bentham', serif;
+ font-family: 'Baskervville', serif;
+ font-family: 'PT Serif', serif;
+*/
+
+body{
+    font-family: 'PT Serif', serif;
+    font-size: 18px;
+    color:#6f6f6f;
+}
+h1,h2{font-family: 'Playfair Display', serif;}
+h3{font-family: 'PT Serif', serif;}
+
+/* Layout */
+
+header{
+    width: 1201px;
+    margin: 0 auto;
+    padding: 46px 0 62px 0;
+    display: flex;
+    justify-content: space-between;
+}
+header h1{
+    font-size: 30px;
+    color: #000;
+    font-weight: bold;
+}
+header nav{
+    width: 390px;
+    display: flex;
+    justify-content: space-between;
+}
+header nav a{
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    font-size: 14px;
+    color: #000;
+    padding-top: 13px;
+}
+header .burger{
+    width: 30px;
+    height: 20px;
+    border: none;
+    background: none;
+    outline-style: none;
+    position: relative;
+}
+header .burger span{
+    display: block;
+    width: 30px;
+    height: 3px;
+    border-radius: 30px;
+    background: black;
+    position: absolute;
+    left: 0; top: 0;
+    transition: .5s;
+}
+header .burger span:nth-of-type(2){
+    width: 20px;
+    top: 50%;
+}
+header .burger span:nth-of-type(3){
+    top: 100%;
+    width: 25px;
+}
+header .burger:hover span:nth-of-type(1){
+    top: 50%;
+    transform: rotate(45deg);
+}
+header .burger:hover span:nth-of-type(2){
+    opacity: 0;
+}
+header .burger:hover span:nth-of-type(3){
+    width: 30px;
+    top: 50%;
+    transform: rotate(-45deg);
+}
+
+main{
+    height: 750px;
+    position: relative;
+    background: url(../img/background.jpg) no-repeat center / cover;
+}
+
+.inbox{
+    width: 905px;
+    height: 644px;
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%,-35%);
+    background-color: #fff;
+    color: #000;
+    letter-spacing: 2px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: .5s;
+}
+
+.inbox:hover{
+    top: 55%;
+}
+
+.title{
+    padding: 44px 63px;
+}
+
+.title h2{
+    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+    padding-bottom: 100px;
+    display: inline-block;
+}
+
+.title nav{
+    float: right;
+    width: 84px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title:after{
+    content: '';
+    width: 780px;
+    height: 307px;
+    background-image: url(../img/02.jpg);
+    display: block;
+    background-position: 30% 13%;
+    background-size: 117%;
+    background-repeat: no-repeat;
+}
+
+.contents{
+    padding: 0 63px;
+}
+
+.contents h3{
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 32px;
+}
+
+.contents p{
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    padding: 0 0 10px 6px;
+    position: relative;
+    z-index: 5;
+}
+
+.contents p mark{
+    content: '';
+    width: 100px;
+    height: 18px;
+    background-color: #fed38e;
+    position: absolute;
+    left: 6; top: 0;
+    z-index: 3;
+}
+
+.contents span{
+    font-weight: bold;
+}
+
+footer{
+    width: 100%;
+    padding: 152px 0 92px;
+    text-align: center;
+    font-size: 15px;
+    color: #bcbcbc;
+}
